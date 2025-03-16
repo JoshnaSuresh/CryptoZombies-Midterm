@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zombie Gallery</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Blood splatter effect */
+    .blood-splatter {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.freeiconspng.com/uploads/blood-png-4.png');
+      opacity: 0.1;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Fog effect */
+    .fog {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Glow effect for headers */
+    .glow {
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    }
+
+    /* Gallery container */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      z-index: 2;
+    }
+
+    /* Zombie card styling */
+    .zombie-card {
+      background-color: #333;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .zombie-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .zombie-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .zombie-card h3 {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    /* Button styling */
+    .btn-zombie {
+      background-color: #8b0000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .btn-zombie:hover {
+      background-color: #660000;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Blood splatter and fog effects -->
+  <div class="blood-splatter"></div>
+  <div class="fog"></div>
+
+  <!-- Main content -->
+  <div class="container text-center" style="z-index: 2;">
+    <h1 class="mb-4 glow">Zombie Gallery</h1>
+    <div class="gallery-container" id="zombieGallery">
+      <!-- Zombie 1 -->
+      <div class="zombie-card">
+        <img src="C0.png" alt="Zombie 1">
+        <h3>Lemmie</h3>
+      </div>
+
+      <!-- Zombie 2 -->
+      <div class="zombie-card">
+        <img src="C1.png" alt="Zombie 2">
+        <h3>Joshna</h3>
+      </div>
+
+      <!-- Zombie 3 -->
+      <div class="zombie-card">
+        <img src="C2.png" alt="Zombie 3">
+        <h3>Shubham</h3>
+      </div>
+
+      <!-- Zombie 4 -->
+      <div class="zombie-card">
+        <img src="C3.png" alt="Zombie 4">
+        <h3>Susan</h3>
+      </div>
+
+      <!-- Add more zombies as needed -->
+    </div>
+
+    <!-- Back button -->
+    <button class="btn btn-zombie" onclick="location.href='index.html'">Back to Main</button>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
